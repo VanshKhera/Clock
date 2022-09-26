@@ -11,14 +11,13 @@ window.onload = function () {
     var buttonStart = document.getElementById('button-start');
     var buttonStop = document.getElementById('button-stop');
     var buttonReset = document.getElementById('button-reset');
-    var Interval ;
+    var Interval;
   
-function start(){
-    buttonStart.onclick = function() {
-      
+      buttonStart.onclick = function() {
+
       clearInterval(Interval);
-       Interval = setInterval(startTimer, 10);
-    }}
+      Interval = setInterval(startTimer, 10);
+      }
 
       buttonStop.onclick = function() {
          clearInterval(Interval);

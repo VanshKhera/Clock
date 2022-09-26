@@ -13,17 +13,17 @@ window.onload = function () {
     var buttonReset = document.getElementById('button-reset');
     var Interval ;
   
+function start(){
     buttonStart.onclick = function() {
       
       clearInterval(Interval);
        Interval = setInterval(startTimer, 10);
-    }
-    
+    }}
+
       buttonStop.onclick = function() {
          clearInterval(Interval);
-    }
+      }
     
-  
     buttonReset.onclick = function() {
        clearInterval(Interval);
       tens = "00";
@@ -87,7 +87,7 @@ controls.addEventListener("click", function e(){
         btn2.style.display = "none"
         btn3.style.display = "none"
 
-        t.style.fontSize = "285px"
+        t.style.fontSize = "280px"
         controls.innerHTML = "Show Controls"
     }
     else{
@@ -95,7 +95,14 @@ controls.addEventListener("click", function e(){
         btn2.style.display = ""
         btn3.style.display = ""
 
-        t.style.fontSize = "240px"
+        t.style.fontSize = "238px"
         controls.innerHTML = "Hide Controls"
     }
+})
+
+document.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
+    // SOON!
+    // console.log("Space pressed")
+  }
 })
